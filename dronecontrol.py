@@ -48,23 +48,15 @@ while 1:
 		break
 	except:
 		continue
-
-			
-def control(x):
-	while 1:
-		direc = s4.recv(1024)
-		if(direc == b'0'):
-			print("Left")
-			data = b'ff087e00403f9012120046'
-		if(direc == b'1'):
-			print("Right")
-			data = b'ff087e7e403f90121200c8'
 	
 def stream(x):
 	while 1:
 		try:
 			s2.send(binascii.unhexlify(b'000102030405060708092828'))
-			s3.send(s2.recv(1024))
+			#Uncomment for Windows
+			#s3.send(s2.recv(1024))
+			#Uncomment for Linux
+			#print(s2.recv(1024))
 		except:
 			continue
 	
