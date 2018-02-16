@@ -56,7 +56,7 @@ def stream(x):
 			#Uncomment for Windows
 			#s3.send(s2.recv(1024))
 			#Uncomment for Linux
-			#print(s2.recv(1024))
+			#sys.stdout.buffer.write(s2.recv(1024))
 		except:
 			continue
 	
