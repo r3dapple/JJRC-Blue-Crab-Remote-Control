@@ -127,7 +127,6 @@ for n in range(0,100):
 
 start_new_thread(keylistener,("",))
 start_new_thread(stream,("",))
-start_new_thread(control,("",))
 sendPackage()
 	
 
